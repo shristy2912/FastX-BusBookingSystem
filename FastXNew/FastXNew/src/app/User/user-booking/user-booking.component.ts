@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class UserBookingComponent implements OnInit {
   bookingForm: FormGroup;
   busRoutes: any[] = [];
-  selectedBusId: number | null = null; // Initialize as null
+  selectedBusId: number | null = null; 
 
   constructor(
     private fb: FormBuilder,
@@ -42,7 +42,7 @@ export class UserBookingComponent implements OnInit {
   }
 
   onSelectBus(busId: number): void {
-    // Set the selected bus ID when the user selects a bus
+  
     this.selectedBusId = busId;
   }
 
@@ -59,7 +59,7 @@ export class UserBookingComponent implements OnInit {
   );
 
   if (selectedRoute) {
-    // Navigate to buses-page with the selected route's details
+
     this.router.navigate([`/busespage/${selectedRoute.RouteId}`], {
       state: { route: selectedRoute, formData: formData }
     });

@@ -1,5 +1,5 @@
 <!-- booking.component.html -->
-
+<h1 class="text-center">My Booking Table</h1>
 <div *ngIf="bookingWithBusDetails">
   <table>
     <thead>
@@ -12,7 +12,7 @@
         <th>Total Seats</th>
         <th>Total Cost</th>
         <th>Booking Date</th>
-        <th>Delete</th>
+        <!-- <th>Delete</th> -->
       </tr>
     </thead>
     <tbody>
@@ -25,8 +25,34 @@
         <td>{{ booking.TotalSeats }}</td>
         <td>{{ booking.TotalCost }}</td>
         <td>{{ booking.BookingDate | date:'yyyy-MM-dd HH:mm:ss' }}</td>
-        <td><i class="fa fa-trash red-icon fa-lg" (click)="delRecord(booking.BookingId)"></i></td>
+        <!-- <td><i class="fa fa-trash red-icon fa-lg" (click)="delRecord(booking.BookingId)"></i></td> -->
       </tr>
     </tbody>
   </table>
 </div>
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Booking ID</th>
+      <th>Username</th>
+      <th>Bus Name</th>
+      <th>Bus Number</th>
+      <th>Total Seats</th>
+      <th>Total Cost</th>
+      <th>Booking Date</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <td>1</td>
+    <td>Prema</td>
+    <td>Jeevan Travels</td>
+    <td>DL-02-11R5</td>
+    <td>1</td>
+    <td>750</td>
+    <td>16-03-24</td>
+    <td><td><i class="fa fa-trash red-icon fa-lg" ></i></td>
+  </tbody>
+</table>
+ -->

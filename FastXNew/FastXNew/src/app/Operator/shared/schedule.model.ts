@@ -8,4 +8,12 @@ export class Schedule {
  
     
  }
+// import { Bus } from "./bus.model";
+
+// export class BusWithSchedule extends Bus {
+//     ScheduleId: number;
+//     DepartureTime: string;
+//     ArrivalTime: string;
+//     Fare: number;
+//   }
  

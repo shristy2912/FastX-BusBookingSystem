@@ -23,6 +23,8 @@ import { AboutComponent } from './navbarComponent/about/about.component';
 import { ContactComponent } from './navbarComponent/contact/contact.component';
 import { OperatorDashboardComponent } from './Operator/operator-dashboard/operator-dashboard.component';
 import { BusesComponent } from './module/admin/components/buses/buses.component';
+import { PaymentComponent } from './User/payment/payment.component';
+import { MybookingComponent } from './User/mybooking/mybooking.component';
 
 
 
@@ -45,7 +47,8 @@ const routes: Routes = [
   {path:"seat-availability/:busId",component:SeatAvailComponent},
   {path:"user",component:UserAccountComponent},
   {path:"buses",component:BusesComponent},
-
+  {path:'payment',component:PaymentComponent},
+{path:'mybooking',component:MybookingComponent},
   {
     path: "admin",
     component: AdminDashboardComponent,

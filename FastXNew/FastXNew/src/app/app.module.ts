@@ -36,6 +36,8 @@ import { NavAdComponent } from './module/admin/nav-ad/nav-ad.component';
 import { NavCommonComponent } from './navbarComponent/nav-common/nav-common.component';
 import { OperatorDashboardComponent } from './Operator/operator-dashboard/operator-dashboard.component';
 import { BusesComponent } from './module/admin/components/buses/buses.component';
+import { PaymentComponent } from './User/payment/payment.component';
+import { MybookingComponent } from './User/mybooking/mybooking.component';
 
 
 
@@ -72,7 +74,9 @@ import { BusesComponent } from './module/admin/components/buses/buses.component'
          NavAdComponent,
          NavCommonComponent,
          OperatorDashboardComponent,
-         BusesComponent
+         BusesComponent,
+         PaymentComponent,
+         MybookingComponent
   ],
   imports: [
     BrowserModule,
