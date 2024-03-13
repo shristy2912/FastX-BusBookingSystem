@@ -1,0 +1,23 @@
+<!-- final-booking.component.html -->
+
+<div class="container mt-5">
+  <h2>Final Booking Information</h2>
+  
+  <div>
+    <!-- <p><strong>Bus Details:</strong> {{ busDetails | json }}</p>
+    <p><strong>Selected Seat:</strong> {{ selectedSeat }}</p>
+    <p><strong>Ticket Price:</strong> ${{ ticketPrice }}</p> -->
+
+    <!-- Display Schedule Details -->
+    <div *ngIf="scheduleDetails">
+      <p><strong>Schedule Details:</strong></p>
+      <ul>
+        <li><strong>Departure Time:</strong> {{ scheduleDetails.departureTime }}</li>
+        <li><strong>Arrival Time:</strong> {{ scheduleDetails.arrivalTime }}</li>
+      
+      </ul>
+    </div>
+
+    <button class="btn btn-primary">Proceed to Payment</button>
+  </div>
+</div>

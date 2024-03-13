@@ -1,0 +1,7 @@
+<!-- seat-avail.component.html -->
+
+<div class="seat-container">
+  <div *ngFor="let seat of seatAvailability | keyvalue" class="seat-icon" [class.available]="seat.value.IsAvailable">
+    {{ seat.value.SeatNumber }}
+  </div>
+</div>

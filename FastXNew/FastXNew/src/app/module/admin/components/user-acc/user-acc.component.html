@@ -1,0 +1,29 @@
+<div class="table-responsive">
+  <table class="table table-hover text-bg-primary">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Contact Number</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of objsrv.ulist">
+        <td>{{ user.UserId }}</td>
+        <td>{{ user.Name }}</td>
+        <td>{{ user.Gender }}</td>
+        <td>{{ user.ContactNumber }}</td>
+        <td>{{ user.Address }}</td>
+        <td>{{ user.Email }}</td>
+        
+        <td>
+          <i class="fa fa-trash red-icon" (click)="delRecord(user.UserId)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

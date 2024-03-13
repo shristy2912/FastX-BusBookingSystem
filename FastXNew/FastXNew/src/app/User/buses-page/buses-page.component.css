@@ -1,0 +1,7 @@
+/* Add this to your component's CSS file or styles.scss */
+.bus-details-box {
+    border: 1px solid #ddd; /* Border color and thickness */
+    padding: 10px; /* Padding around the content */
+    margin-bottom: 10px; /* Spacing between boxes */
+  }
+  

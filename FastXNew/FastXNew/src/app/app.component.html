@@ -1,0 +1,50 @@
+
+<!-- <body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1dYZUu1MmJOBOGwsYyyV5Mf9icRXO5oPyC9i4H4N5vmVItosuJt4bxpogwVYECIhXT0U&usqp=CAU">  -->
+   
+
+  
+  <app-nav-common *ngIf="!isAdminLoggedIn && !isCustomerLoggedIn && !isOperatorLoggedIn"></app-nav-common>
+  
+
+  <app-nav-ad *ngIf="isAdminLoggedIn && !isCustomerLoggedIn && !isOperatorLoggedIn"></app-nav-ad>
+  <app-nav *ngIf="isCustomerLoggedIn && !isAdminLoggedIn && !isOperatorLoggedIn"></app-nav>
+  <app-nav-op *ngIf="isOperatorLoggedIn && !isAdminLoggedIn && !isCustomerLoggedIn"></app-nav-op>
+  <router-outlet></router-outlet>
+  <!-- Navbar for Customer -->
+  <!-- <div >
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">Home</a>
+            </li>
+           
+  
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/navop" routerLinkActive="active">Dashboard</a>
+            </li>
+  
+            
+            <li class="nav-item">
+              <a class="nav-link" (click)="logout()" routerLink="/login" routerLinkActive="active">logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+  </div>
+</div>
+
+
+
+
+<div class="container-fluid-sm content " style="padding-top: 56px;"> 
+  <router-outlet></router-outlet>
+</div> -->

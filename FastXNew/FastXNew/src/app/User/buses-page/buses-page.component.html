@@ -1,0 +1,39 @@
+<!-- buses-page.component.html -->
+<div class="container mt-5">
+  <h2>Available Buses for Route <strong>{{ routeId }}</strong></h2>
+  <div *ngIf="availableBuses.length > 0; else noBuses">
+    <ul>
+      <li *ngFor="let bus of availableBuses">
+        <div class="bus-details-box">
+          <p><strong>Bus ID:</strong> {{ bus.BusId }}, <strong>Bus Name:</strong> {{ bus.BusName }}, <strong>Capacity:</strong> {{ bus.NumberOfSeats }} Seats</p>
+          <p><strong>Seat Type:</strong> {{ bus.SeatType}}, <strong>Bus Type:</strong> {{ bus.BusType}}, <strong>Pickup Point:</strong> {{ bus.PickUp}}, <strong>Drop point:</strong> {{ bus.DropPoint}}</p>
+          <p><strong>Water Bottle:</strong> {{ bus.WaterBottle}}, <strong>TV:</strong> {{ bus.Tv}}, <strong>Charging Point:</strong> {{ bus.ChargingPoint}}</p>
+          
+          <!-- Button to show seat dropdown -->
+          <button class="btn btn-primary" (click)="showSeatDropdown(bus)">Check Seat Availability</button>
+
+          <!-- Dropdown for available seats -->
+          <div *ngIf="bus.showSeatDropdown && bus.Seats && bus.Seats.$values && bus.Seats.$values.length > 0">
+            <label for="seatDropdown">Select Seat: </label>
+            <select id="seatDropdown" [(ngModel)]="selectedSeat">
+              <option *ngFor="let seat of bus.Seats.$values" [value]="seat.SeatId" [disabled]="!seat.IsAvailable">
+                Seat {{ seat.SeatNumber }} ({{ seat.IsAvailable ? 'Available' : 'Occupied' }})
+              </option>
+            </select>
+          </div>
+
+          <!-- "Book Ticket" button -->
+          <button class="btn btn-success" [disabled]="!selectedSeat" (click)="bookTicket(bus, selectedSeat)">Book Ticket</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <ng-template #noBuses>
+    <p>No available buses for this route.</p>
+  </ng-template>
+
+  <ng-container *ngIf="selectedBusId && selectedSeat">
+   
+    <app-seat-avail [busId]="selectedBusId" [selectedSeat]="selectedSeat"></app-seat-avail>
+  </ng-container>
+</div>

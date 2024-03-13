@@ -1,0 +1,24 @@
+<table class="table table-hover text-bg-primary">
+    <thead>
+        <tr>
+            <th>Route ID</th>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Travel Date</th>
+           
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of srv.blist">
+          <td>{{ p.RouteId }}</td>
+          <td>{{ p.Origin }}</td>
+          <td>{{ p.Destination }}</td>
+          <td>{{ p.TravelDate }}</td>
+          <td><i class="fa fa-trash red-icon" (click)="delRecord(p.RouteId)"></i></td>
+          <td><i class="fa fa-edit green-icon" (click)="fillForm(p)"></i></td>
+        </tr>
+      </tbody>
+      
+</table>

@@ -1,0 +1,18 @@
+/* seat-availability.component.css */
+
+.seat-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.seat-icon {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.available {
+  background-color: green;
+}

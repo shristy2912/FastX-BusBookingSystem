@@ -1,0 +1,30 @@
+<div class="table-responsive">
+  <table class="table table-hover text-bg-primary">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Contact Number</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Delete</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of srv.list">
+        <td>{{ p.BusOperatorId}}</td>
+        <td>{{ p.Name }}</td>
+        <td>{{ p.Gender }}</td>
+        <td>{{ p.ContactNumber }}</td>
+        <td>{{ p.Address }}</td>
+        <td>{{ p.Email }}</td>
+       
+        <td>
+          <i class="fa fa-trash red-icon" (click)="delRecord(p.BusOperatorId)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,45 @@
+
+
+<table class="table table-hover text-bg-primary">
+    <thead>
+        <tr>
+            <th>Bus ID</th>
+            <th>Route Id</th>
+            <th>Operator Id</th>
+            <th>Bus Name</th>
+            <th>Bus Number</th>
+            <th>Seat Type</th>
+            <th>Bus Type</th>
+            <th>Number of Seats</th>
+            <th>Pick Up</th>
+            <th>Drop Point</th>
+            <th>WaterBottle</th>
+            <th>ChargingPoint</th>
+            <th>TV</th>
+            <th>Blanket</th>
+
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of srv.buslist">
+            <td>{{p.BusId}}</td>
+            <td>{{p.RouteId}}</td>
+            <td>{{p.OperatorId}}</td>
+            <td>{{p.BusName}}</td>
+            <td>{{p.BusNumber}}</td>
+            <td>{{p.SeatType}}</td>
+            <td>{{p.BusType}}</td>
+            <td>{{p.NumberOfSeats}}</td>
+            <td>{{p.PickUp}}</td>
+            <td>{{p.DropPoint}}</td>
+            <td>{{p.WaterBottle}}</td>
+            <td>{{p.ChargingPoint}}</td>
+            <td>{{p.Tv}}</td>
+            <td>{{p.Blanket}}</td>
+            
+            <td><i class="fa fa-trash red-icon"></i>Delete</td>
+            <!-- <td><button><i class="fa fa-edit green-icon"></i>Update</button></td> -->
+        </tr>
+    </tbody>
+</table>

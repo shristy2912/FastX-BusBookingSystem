@@ -1,0 +1,39 @@
+<!-- user-booking.component.html -->
+<div class="container mt-5">
+  <h2>User Dashboard</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="route">Select Route:</label>
+          <select formControlName="route" id="route" class="form-control">
+            <option *ngFor="let route of busRoutes" [value]="route">{{ route.Origin }} to {{ route.Destination }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="origin">Select Origin:</label>
+          <select formControlName="origin" id="origin" class="form-control">
+            <option *ngFor="let route of busRoutes" [value]="route.Origin">{{ route.Origin }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="destination">Select Destination:</label>
+          <select formControlName="destination" id="destination" class="form-control">
+            <option *ngFor="let route of busRoutes" [value]="route.Destination">{{ route.Destination }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="travelDate">Select Travel Date:</label>
+          <input type="date" formControlName="travelDate" id="travelDate" class="form-control">
+        </div>
+
+        <!-- Add other form controls here as needed -->
+
+        <button type="submit" class="btn btn-primary" [disabled]="bookingForm.invalid">View Buses</button>
+      </form>
+    </div>
+  </div>
+</div>
